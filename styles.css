@@ -1,0 +1,168 @@
+/* Estilos inspirados na Netflix */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: #141414;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o tema claro */
+body[data-theme="light"] { background: #f5f5f5; color: #222; }
+
+/* Estilos para o título principal */
+h1 {
+    font-size: 64px;
+    font-weight: 100; /* Deixa a fonte bem fininha */
+    margin: 0 0 40px 0; /* Espaço entre título e perfis */
+    letter-spacing: 0px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Estilos para a seção de perfis */
+.profiles nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* Espaçamento reduzido entre os perfis */
+}
+
+.item-perfil a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para cada perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 160px; /* Largura do perfil */
+}
+
+ /* Estilos para as imagens dos perfis */
+.profile img {
+    width: 160px; /* Largura da imagem do perfil */
+    height: 160px; /* Altura da imagem do perfil */
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    border-radius: 4px; /* Bordas arredondadas para um visual mais suave */
+    border: 3px solid transparent; /* Garante que não haja "salto" ao aparecer a borda */
+    transition: none; /* Remove qualquer transição */
+}
+
+/* Estilos para os nomes dos perfis */
+.profile figcaption {
+    color: #808080;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+/* Efeito de hover para destacar o perfil selecionado */
+.profile:hover img {
+    border-color: #fff;
+}
+/* Efeito de hover para destacar o nome do perfil */
+.profile:hover figcaption {
+    color: #fff;
+}
+
+.add-profile {
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 160px;
+}
+
+.add-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    background: #1f1f1f;
+    color: #808080;
+    display: grid;
+    place-items: center;
+    font-size: 72px;
+    line-height: 1;
+}
+
+.add-name {
+    color: #808080;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.add-profile:hover .add-avatar {
+    border-color: #fff;
+    color: #fff;
+}
+
+.add-profile:hover .add-name {
+    color: #fff;
+}
+
+/* Estilos para o botão de gerenciamento de perfis */
+.manage-profiles-button {
+    margin-top: 64px;
+    padding: 10px 28px;
+    background: transparent;
+    color: #808080;
+    border: 1px solid #808080;
+    letter-spacing: 2px;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.manage-profiles-button:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+body.is-managing-profiles .profile img,
+body.is-managing-profiles .add-avatar {
+    border-color: #e50914;
+}
+
+/* Estilos para o tema claro */
+body[data-theme="light"] .profile img { border-color: #ccc; }
+body[data-theme="light"] .profile:hover img { border-color: #222; }
+body[data-theme="light"] .profile figcaption { color: #444; }
+body[data-theme="light"] .profile:hover figcaption { color: #222; }
+body[data-theme="light"] .add-avatar { background: #ececec; color: #666; border-color: #ccc; }
+body[data-theme="light"] .add-profile:hover .add-avatar { border-color: #222; color: #222; }
+body[data-theme="light"] .add-name { color: #444; }
+body[data-theme="light"] .add-profile:hover .add-name { color: #222; }
+body[data-theme="light"] .manage-profiles-button { color: #555; border-color: #555; }
+body[data-theme="light"] .manage-profiles-button:hover { color: #111; border-color: #111; }
+
+@media (max-width: 900px) {
+    h1 { font-size: 2.5rem; }
+    .profile img { width: 120px; height: 120px; }
+    .add-profile { width: 120px; }
+    .add-avatar { width: 120px; height: 120px; font-size: 56px; }
+}
+
+@media (max-width: 800px) {
+    h1 { font-size: 40px; }
+    .profile { width: 120px; }
+    .profile img { width: 120px; height: 120px; }
+    .add-profile { width: 120px; }
+    .add-avatar { width: 120px; height: 120px; font-size: 56px; }
+    .profiles nav ul { gap: 15px; }
+    .manage-profiles-button { margin-top: 36px; }
+}

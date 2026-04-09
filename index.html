@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <button id="theme-toggle" aria-label="Alternar tema" style="position:absolute;top:1rem;right:1rem;z-index:10;">🌙/☀️</button>
+    <main>
+        <h1>Quem está assistindo?</h1>
+        <section class="profiles" aria-label="Perfis de usuário">
+            <nav>
+                <ul class="lista-perfis">
+                    <li class="item-perfil">
+                        <a href="catalogo/catalogo.html">
+                            <figure class="profile">
+                                <img src="/assets/perfil1.jpeg" alt="Personagem gótico de stop-motion com cartola e paletó roxo em um cenário fantástico e misterioso.">
+                                <figcaption>Rony</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="item-perfil">
+                        <a href="catalogo/catalogo.html">
+                            <figure class="profile">
+                                <img src="/assets/perfil2.jpeg" alt="Bicicleta amarela em estilo stop-motion com cartola e flores, flutuando em um fundo roxo místico.">
+                                <figcaption>Anna</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="item-perfil">
+                        <a href="catalogo/catalogo.html">
+                            <figure class="profile">
+                                <img src="/assets/perfil3.jpeg" alt="Personagem gótico de stop-motion com cartola e paletó roxo em um cenário fantástico e misterioso.">
+                                <figcaption>Andressa</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="item-perfil">
+                        <a href="catalogo/catalogo.html">
+                            <figure class="profile">
+                                <img src="/assets/perfil4.jpeg" alt="Bicicleta amarela em estilo stop-motion com cartola e flores, flutuando em um fundo roxo místico.">
+                                <figcaption>Andre_Arthur_Pedro</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="item-perfil item-adicionar">
+                        <button type="button" class="profile add-profile" id="add-profile-button" aria-label="Adicionar perfil">
+                            <span class="add-avatar" aria-hidden="true">+</span>
+                            <span class="add-name">Adicionar perfil</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <button type="button" id="manage-profiles-button" class="manage-profiles-button" aria-pressed="false">
+            Gerenciar perfis
+        </button>
+    </main>
+<script src="theme.js"></script>
+<script src="js/index.js"></script>
+<script>
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+</script>
+</body>
+</html>
